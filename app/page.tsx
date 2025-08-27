@@ -219,22 +219,22 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               {
-                image: "/images/portfolio/254632646_838871606809463_127475618212694183_n.jpg",
-                title: "Modern Hill Country Kitchen",
+                image: "/images/portfolio/280962352_979960499323253_3096391473720849804_n.webp",
+                title: "Midnight on the Hill Country",
                 location: "Austin, TX",
-                description: "White Oak with Natural Finish"
+                description: "Modern ballad featuring frameless black cabinetry with Calacatta marble's natural rhythm"
               },
               {
-                image: "/images/portfolio/280962352_979960499323253_3096391473720849804_n.webp",
-                title: "Contemporary European Design", 
-                location: "Lakeway, TX",
-                description: "Walnut with Clear Coat"
+                image: "/images/portfolio/283287162_378067917441562_7710920979229083174_n.webp",
+                title: "Laundry Day Blues (But Make it Beautiful)", 
+                location: "Dripping Springs, TX",
+                description: "Honey-oak traditional warmth with European soft-close drawers and patterned tile backbeat"
               },
               {
                 image: "/images/portfolio/285874445_972335230015127_3264095633632455465_n.webp",
-                title: "Traditional Hill Country",
+                title: "Workshop Hymnal - Cabinet Frames in Progress",
                 location: "Spicewood, TX", 
-                description: "Cherry with Hand-Rubbed Finish"
+                description: "Raw cabinet frames standing like verses - European precision meets Hill Country soul"
               }
             ].map((project, index) => (
               <motion.div 
