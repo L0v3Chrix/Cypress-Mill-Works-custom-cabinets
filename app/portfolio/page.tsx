@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Navigation from '../../components/Navigation'
 
@@ -12,7 +13,7 @@ export default function PortfolioPage() {
     setIsLoaded(true)
   }, [])
 
-  // Mock portfolio data - would come from CMS or database
+  // Portfolio data with real images
   const portfolioProjects = [
     {
       id: 1,
@@ -22,7 +23,7 @@ export default function PortfolioPage() {
       material: "White Oak with Natural Finish",
       description: "A stunning European frameless kitchen featuring clean lines and maximum storage efficiency.",
       features: ["32mm European System", "Blum Soft-Close Hardware", "Full-Extension Drawers", "Hidden Hinges"],
-      image: "placeholder-kitchen-1"
+      image: "/images/portfolio/254632646_838871606809463_127475618212694183_n.jpg"
     },
     {
       id: 2,
@@ -32,7 +33,7 @@ export default function PortfolioPage() {
       material: "Walnut with Clear Coat",
       description: "Sophisticated European construction meets Texas lake house living with premium walnut cabinetry.",
       features: ["European Hardware", "Soft-Close Doors", "Custom Interior Organization", "Concealed LED Lighting"],
-      image: "placeholder-kitchen-2"
+      image: "/images/portfolio/280962352_979960499323253_3096391473720849804_n.webp"
     },
     {
       id: 3,
@@ -42,7 +43,7 @@ export default function PortfolioPage() {
       material: "Cherry with Hand-Rubbed Finish",
       description: "Classic European craftsmanship with rich cherry wood brings warmth to this hill country home.",
       features: ["Hand-Selected Cherry", "European Joinery", "Soft-Close Technology", "Custom Crown Molding"],
-      image: "placeholder-kitchen-3"
+      image: "/images/portfolio/285874445_972335230015127_3264095633632455465_n.webp"
     },
     {
       id: 4,
@@ -52,7 +53,7 @@ export default function PortfolioPage() {
       material: "Painted MDF - Swiss White",
       description: "Clean, minimalist design showcasing the precision of European frameless construction.",
       features: ["Seamless Paint Finish", "Handle-less Design", "Push-to-Open Hardware", "Integrated Appliances"],
-      image: "placeholder-kitchen-4"
+      image: "/images/portfolio/283287162_378067917441562_7710920979229083174_n.webp"
     },
     {
       id: 5,
@@ -62,7 +63,7 @@ export default function PortfolioPage() {
       material: "Reclaimed Texas Oak",
       description: "Local Texas oak meets European precision in this stunning rustic contemporary kitchen.",
       features: ["Reclaimed Local Wood", "European Construction", "Custom Distressing", "Brass Hardware Accents"],
-      image: "placeholder-kitchen-5"
+      image: "/images/portfolio/298892177_757382282166595_2197745396531062781_n.webp"
     },
     {
       id: 6,
@@ -72,7 +73,7 @@ export default function PortfolioPage() {
       material: "Maple with Espresso Stain", 
       description: "European precision extends to this luxurious master bathroom vanity and storage system.",
       features: ["Water-Resistant Finishes", "Soft-Close Drawers", "Custom Sizing", "Integrated Lighting"],
-      image: "placeholder-bathroom-1"
+      image: "/images/portfolio/175556342_533160574735202_6868182073289303354_n.jpg"
     }
   ]
 
@@ -132,14 +133,15 @@ export default function PortfolioPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                {/* Project Image Placeholder */}
-                <div className="aspect-cabinet bg-gradient-to-br from-cedar to-weathered-wood rounded-t-lg flex items-center justify-center text-white relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
-                  <div className="text-center relative z-10">
-                    <div className="text-4xl mb-2">🏠</div>
-                    <div className="text-sm">European Cabinet Project</div>
-                    <div className="text-xs opacity-80 mt-1">{project.location}</div>
-                  </div>
+                {/* Project Image */}
+                <div className="aspect-cabinet relative rounded-t-lg overflow-hidden">
+                  <Image 
+                    src={project.image}
+                    alt={`${project.title} - European frameless cabinets in ${project.location}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
                   
                   {/* European Badge */}
                   <div className="absolute top-4 right-4">

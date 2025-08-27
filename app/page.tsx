@@ -101,23 +101,14 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <div className="relative rounded-lg overflow-hidden shadow-craftsman">
-                {/* Placeholder for CMCC workshop photo */}
-                <div className="w-full h-96 bg-gradient-to-br from-cedar to-weathered-wood flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="text-6xl font-craftsman mb-4">🔨</div>
-                    <div className="font-workshop">CMCC Workshop</div>
-                    <div className="text-sm opacity-80">Spicewood, Texas</div>
-                  </div>
-                </div>
-                {/* Future: Replace with actual photo */}
-                {/* <Image 
-                  src="/images/mike-switzer-workshop.jpg"
-                  alt="CMCC craftsmen building European frameless cabinets in the Spicewood workshop"
+                <Image 
+                  src="/images/Mike-Switzer-headshoot.jpg"
+                  alt="Mike Switzer - Master craftsman specializing in European frameless cabinets"
                   width={600}
                   height={400}
                   className="w-full h-96 object-cover"
                   priority
-                /> */}
+                />
               </div>
 
               {/* Craftsman Signature Card */}
@@ -224,30 +215,53 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          {/* Portfolio Grid Placeholder */}
+          {/* Portfolio Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[1, 2, 3].map((item) => (
+            {[
+              {
+                image: "/images/portfolio/254632646_838871606809463_127475618212694183_n.jpg",
+                title: "Modern Hill Country Kitchen",
+                location: "Austin, TX",
+                description: "White Oak with Natural Finish"
+              },
+              {
+                image: "/images/portfolio/280962352_979960499323253_3096391473720849804_n.webp",
+                title: "Contemporary European Design", 
+                location: "Lakeway, TX",
+                description: "Walnut with Clear Coat"
+              },
+              {
+                image: "/images/portfolio/285874445_972335230015127_3264095633632455465_n.webp",
+                title: "Traditional Hill Country",
+                location: "Spicewood, TX", 
+                description: "Cherry with Hand-Rubbed Finish"
+              }
+            ].map((project, index) => (
               <motion.div 
-                key={item}
-                className="european-cabinet-card"
+                key={index}
+                className="european-cabinet-card group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: item * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="aspect-cabinet bg-gradient-to-br from-cedar to-weathered-wood rounded-t-lg flex items-center justify-center text-white">
-                  <div className="text-center">
-                    <div className="text-3xl mb-2">🏠</div>
-                    <div className="text-sm">European Cabinet Project</div>
+                <div className="aspect-cabinet relative rounded-t-lg overflow-hidden">
+                  <Image 
+                    src={project.image}
+                    alt={`${project.title} - European frameless cabinets in ${project.location}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <div className="european-badge">European Frameless</div>
                   </div>
                 </div>
                 <div className="p-4">
-                  <div className="european-badge mb-2">European Frameless</div>
                   <h3 className="font-craftsman text-lg text-workshop-charcoal mb-1">
-                    Hill Country Kitchen
+                    {project.title}
                   </h3>
                   <p className="text-cedar text-sm">
-                    Austin, TX • White Oak with Natural Finish
+                    {project.location} • {project.description}
                   </p>
                   <div className="mt-2 signature text-xs">
                     Crafted by CMCC

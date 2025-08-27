@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Navigation from '../../components/Navigation'
 
@@ -53,7 +54,7 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            {/* Workshop Image */}
+            {/* Mike Switzer Photo */}
             <motion.div 
               className="relative"
               initial={{ opacity: 0, x: 50 }}
@@ -61,13 +62,13 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <div className="relative rounded-lg overflow-hidden shadow-craftsman">
-                <div className="w-full h-96 bg-gradient-to-br from-cedar to-weathered-wood flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="text-6xl font-craftsman mb-4">🔨</div>
-                    <div className="font-workshop">CMCC Workshop</div>
-                    <div className="text-sm opacity-80">Spicewood, Texas</div>
-                  </div>
-                </div>
+                <Image 
+                  src="/images/Mike-Switzer-headshoot.jpg"
+                  alt="Mike Switzer - Master craftsman and European cabinet specialist at CMCC"
+                  width={600}
+                  height={400}
+                  className="w-full h-96 object-cover"
+                />
               </div>
             </motion.div>
           </div>
