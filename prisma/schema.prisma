@@ -1,0 +1,338 @@
+// European Frameless Cabinet Database Schema
+// Mike Switzer's Cypress Millwork Custom Cabinets
+// Spicewood Workshop, Texas Hill Country
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// European Cabinet Specifications
+model CabinetStyle {
+  id          String   @id @default(cuid())
+  name        String   // "European Shaker Frameless", "Modern Slab European"
+  type        CabinetType
+  description String
+  basePrice   Float    // Base price for European construction
+  
+  // European Specific Features
+  isFrameless Boolean  @default(true) // Mike Switzer specializes in frameless
+  hardware    HardwareType @default(EUROPEAN_HINGES)
+  construction String  @default("32mm_system") // European standard
+  
+  // 3D Model Information
+  modelUrl    String?  // Path to 3D European cabinet model
+  thumbnail   String?  // Preview image
+  
+  // Mike Switzer's Craftsmanship Details
+  craftsman   String   @default("Mike Switzer")
+  workshop    String   @default("Spicewood, Texas")
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@map("cabinet_styles")
+}
+
+enum CabinetType {
+  BASE
+  WALL
+  TALL
+  SPECIALTY
+}
+
+enum HardwareType {
+  EUROPEAN_HINGES
+  SOFT_CLOSE_PREMIUM
+  BLUM_SYSTEM
+  GRASS_SYSTEM
+  HETTICH_SYSTEM
+}
+
+// European Wood and Materials
+model Material {
+  id              String  @id @default(cuid())
+  name            String  // "European Oak", "Quarter-sawn Maple", "Paint Grade MDF"
+  type            MaterialType
+  finish          String  // "Hand-rubbed Oil", "Custom Paint", "Natural Stain"
+  priceMultiplier Float   // Multiplier for European premium materials
+  
+  // European Quality Specifications
+  isEuropeanGrade Boolean @default(false) // True European imported materials
+  grainPattern    String? // "Quarter-sawn", "Rift-cut", "Plain-sawn"
+  sustainability  String? // "FSC Certified", "Local Texas Wood"
+  
+  // Visual Assets
+  textureUrl      String? // Wood grain texture for 3D models
+  sampleImage     String? // Real wood sample photo
+  
+  // Mike Switzer's Material Preferences
+  mikeRecommended Boolean @default(false)
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@map("materials")
+}
+
+enum MaterialType {
+  NATURAL_WOOD
+  PAINT_GRADE
+  VENEER
+  LAMINATE
+  SPECIALTY
+}
+
+// Instagram Portfolio Integration - @cypressmillworkscc
+model Portfolio {
+  id           String   @id @default(cuid())
+  
+  // Instagram Integration
+  instagramId  String?  @unique
+  instagramUrl String?
+  
+  // Project Details
+  title        String
+  description  String
+  imageUrl     String
+  imageAlt     String?
+  
+  // Location - Hill Country Focus
+  location     String   // "Spicewood", "Lakeway", "Austin", "Dripping Springs"
+  projectType  ProjectType
+  
+  // European Cabinet Details
+  cabinetStyle String   // Reference to cabinet style used
+  isFrameless  Boolean  @default(true) // Mike Switzer's specialty
+  materials    String?  // Materials used in project
+  
+  // Project Metadata
+  featured     Boolean  @default(false)
+  completionDate DateTime?
+  projectValue Int?     // Optional project value range
+  
+  // Mike Switzer Attribution
+  craftsman    String   @default("Mike Switzer")
+  workshop     String   @default("Spicewood Workshop")
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  @@map("portfolio")
+}
+
+enum ProjectType {
+  KITCHEN
+  BATHROOM
+  BUILT_IN
+  COMMERCIAL
+  SPECIALTY
+}
+
+// 3D Configurator Projects
+model Project {
+  id           String   @id @default(cuid())
+  userId       String?  // Optional user association
+  guestId      String?  // For non-registered users
+  
+  // Project Metadata
+  name         String   @default("My European Kitchen")
+  status       ProjectStatus @default(DRAFT)
+  
+  // Room Configuration
+  roomData     Json     // Room dimensions, layout type
+  
+  // European Cabinet Configuration
+  cabinetConfig Json    // Selected cabinets, positions, materials
+  
+  // Pricing Information
+  pricing      Json?    // Calculated pricing with European premium
+  
+  // Design Preferences
+  designStyle  String?  // "European Modern", "Hill Country Traditional"
+  materials    String?  // Selected materials for project
+  hardware     String?  // Selected European hardware
+  
+  // Lead Generation
+  isQuoteRequested Boolean @default(false)
+  consultationRequested Boolean @default(false)
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  @@map("projects")
+}
+
+enum ProjectStatus {
+  DRAFT
+  QUOTE_REQUESTED
+  CONSULTATION_SCHEDULED
+  IN_PROGRESS
+  COMPLETED
+}
+
+// Lead Management - European Cabinet Inquiries
+model Lead {
+  id           String   @id @default(cuid())
+  
+  // Contact Information
+  firstName    String
+  lastName     String
+  email        String
+  phone        String?
+  
+  // Location - Hill Country Service Area
+  address      String?
+  city         String?
+  state        String   @default("Texas")
+  zipCode      String?
+  
+  // Project Details
+  projectId    String?  // Link to configurator project
+  projectType  ProjectType?
+  timeline     Timeline?
+  budget       BudgetRange?
+  
+  // European Cabinet Interest
+  interestedInFrameless Boolean @default(true)
+  preferredMaterials    String? // Materials they're interested in
+  specialRequests       String? // Custom requests or questions
+  
+  // Lead Source Tracking
+  source       LeadSource
+  referrer     String?  // How they heard about Mike Switzer
+  
+  // Follow-up Status
+  status       LeadStatus @default(NEW)
+  assignedTo   String    @default("Mike Switzer")
+  
+  // Consultation Booking
+  consultationScheduled Boolean @default(false)
+  consultationDate      DateTime?
+  consultationNotes     String?
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  @@map("leads")
+}
+
+enum Timeline {
+  WITHIN_3_MONTHS
+  THREE_TO_SIX_MONTHS
+  SIX_TO_TWELVE_MONTHS
+  JUST_PLANNING
+}
+
+enum BudgetRange {
+  UNDER_15K
+  FROM_15K_TO_30K
+  FROM_30K_TO_50K
+  OVER_50K
+  NOT_SPECIFIED
+}
+
+enum LeadSource {
+  WEBSITE_CONFIGURATOR
+  INSTAGRAM_PORTFOLIO
+  GOOGLE_SEARCH
+  REFERRAL
+  SOCIAL_MEDIA
+  OTHER
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  CONSULTATION_SCHEDULED
+  QUOTE_SENT
+  PROPOSAL_SENT
+  WON
+  LOST
+  NURTURE
+}
+
+// Consultation Bookings - Mike Switzer's Schedule
+model ConsultationBooking {
+  id           String   @id @default(cuid())
+  leadId       String
+  lead         Lead     @relation(fields: [leadId], references: [id])
+  
+  // Appointment Details
+  requestedDate DateTime
+  confirmedDate DateTime?
+  duration      Int      @default(90) // 90 minutes standard
+  
+  // Meeting Type
+  type         ConsultationType @default(IN_HOME)
+  location     String?  // Customer's address or "Spicewood Workshop"
+  
+  // Preparation Notes
+  projectNotes String?  // Notes about European cabinet project
+  measurements Boolean  @default(false) // Whether measurements will be taken
+  
+  // Status Tracking
+  status       BookingStatus @default(REQUESTED)
+  
+  // Mike Switzer's Notes
+  craftsmanNotes String? // Mike's notes about the consultation
+  followUpDate   DateTime? // When to follow up
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  @@map("consultation_bookings")
+}
+
+enum ConsultationType {
+  IN_HOME
+  WORKSHOP_VISIT
+  VIRTUAL
+  PHONE
+}
+
+enum BookingStatus {
+  REQUESTED
+  CONFIRMED
+  RESCHEDULED
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+// User Management (Optional Registration)
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  firstName String?
+  lastName  String?
+  phone     String?
+  
+  // Project History
+  projects  Project[]
+  
+  // Preferences
+  preferences Json?  // Design preferences, communication preferences
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("users")
+}
+
+// Instagram Sync Tracking
+model InstagramSync {
+  id           String   @id @default(cuid())
+  lastSyncDate DateTime
+  postsProcessed Int    @default(0)
+  newProjects  Int      @default(0)
+  errors       Json?    // Any sync errors encountered
+  
+  createdAt    DateTime @default(now())
+  
+  @@map("instagram_sync")
+}

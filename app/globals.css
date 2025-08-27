@@ -1,0 +1,331 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mike Switzer's European Cabinet Workshop Styling */
+/* Hill Country Americana Aesthetic with Craftsman Quality */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+@layer base {
+  :root {
+    /* Hill Country Color Palette */
+    --hill-sage: #9CAF88;
+    --barn-red: #B85450;
+    --limestone: #E8E6E1;
+    --cedar: #8B7355;
+    --creek-blue: #87CEEB;
+    --workshop-charcoal: #3E3E3C;
+    --weathered-wood: #A0907A;
+    --sunset-orange: #CC8B65;
+    --prairie-grass: #C4B896;
+    --ironwork: #4A4A48;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-workshop text-workshop-charcoal bg-limestone antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* European Cabinet Typography Hierarchy */
+  h1 {
+    @apply font-craftsman text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply font-craftsman text-3xl md:text-4xl font-medium leading-tight;
+  }
+
+  h3 {
+    @apply font-craftsman text-2xl md:text-3xl font-medium;
+  }
+
+  h4 {
+    @apply font-workshop text-xl md:text-2xl font-semibold;
+  }
+
+  h5 {
+    @apply font-workshop text-lg md:text-xl font-semibold;
+  }
+
+  h6 {
+    @apply font-workshop text-base md:text-lg font-semibold;
+  }
+
+  p {
+    @apply font-workshop leading-relaxed;
+  }
+
+  /* Mike Switzer's Signature Elements */
+  .signature {
+    @apply font-signature text-barn-red;
+  }
+
+  .craftsman-quote {
+    @apply font-signature text-lg text-cedar italic;
+  }
+
+  /* European Cabinet Focus Elements */
+  .european-badge {
+    @apply bg-hill-sage text-white px-3 py-1 rounded-full text-sm font-workshop font-medium;
+  }
+
+  .frameless-highlight {
+    @apply bg-barn-red/10 border-l-4 border-barn-red px-4 py-2;
+  }
+
+  /* Workshop Authentic Styling */
+  .workshop-card {
+    @apply bg-white rounded-lg shadow-craftsman border border-limestone/50 overflow-hidden;
+  }
+
+  .tool-icon {
+    @apply text-cedar hover:text-barn-red transition-colors duration-200;
+  }
+
+  /* 3D Configurator Specific Styles */
+  .configurator-panel {
+    @apply bg-white/95 backdrop-blur-sm rounded-lg shadow-european border border-cedar/20;
+  }
+
+  .cabinet-preview {
+    @apply rounded-lg overflow-hidden shadow-lg hover:shadow-craftsman transition-shadow duration-300;
+  }
+
+  /* Navigation - Country Road Metaphor */
+  .nav-link {
+    @apply font-workshop text-workshop-charcoal hover:text-barn-red transition-colors duration-200;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--barn-red);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  /* Buttons - Craftsman Quality */
+  .btn-primary {
+    @apply bg-barn-red hover:bg-barn-red/90 text-white font-workshop font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-barn-warm;
+  }
+
+  .btn-secondary {
+    @apply bg-hill-sage hover:bg-hill-sage/90 text-white font-workshop font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-cedar text-cedar hover:bg-cedar hover:text-white font-workshop font-medium px-6 py-3 rounded-lg transition-all duration-200;
+  }
+
+  /* Form Elements - Professional Workshop Quality */
+  .form-input {
+    @apply w-full px-4 py-3 border border-cedar/30 rounded-lg bg-white font-workshop text-workshop-charcoal placeholder:text-cedar/60 focus:outline-none focus:ring-2 focus:ring-barn-red focus:border-transparent;
+  }
+
+  .form-label {
+    @apply block font-workshop font-medium text-workshop-charcoal mb-2;
+  }
+
+  .form-error {
+    @apply text-barn-red text-sm font-workshop mt-1;
+  }
+
+  /* European Cabinet Portfolio Grid */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .portfolio-item {
+    @apply cabinet-preview group cursor-pointer;
+  }
+
+  .portfolio-item img {
+    @apply w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300;
+  }
+
+  /* Mike Switzer Workshop Textures */
+  .wood-texture {
+    background-image: 
+      linear-gradient(45deg, transparent 25%, rgba(139, 115, 85, 0.05) 25%), 
+      linear-gradient(-45deg, transparent 25%, rgba(139, 115, 85, 0.05) 25%), 
+      linear-gradient(45deg, rgba(139, 115, 85, 0.05) 75%, transparent 75%), 
+      linear-gradient(-45deg, rgba(139, 115, 85, 0.05) 75%, transparent 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+
+  /* Hill Country Responsive Backgrounds */
+  .hill-country-hero {
+    background: linear-gradient(135deg, var(--limestone) 0%, var(--creek-blue) 100%);
+    position: relative;
+  }
+
+  .hill-country-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/images/backgrounds/spicewood-hills.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  .hill-country-hero > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Animation Classes */
+  .animate-craft-fade {
+    animation: craftFade 0.8s ease-in-out;
+  }
+
+  .animate-tool-hover {
+    animation: toolHover 0.3s ease-in-out;
+  }
+
+  /* European Cabinet Specific Animations */
+  .hinge-animation {
+    transform-origin: left center;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hinge-animation:hover {
+    transform: rotateY(-15deg);
+  }
+
+  .soft-close-demo {
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Loading States */
+  .loading-spinner {
+    @apply inline-block w-4 h-4 border-2 border-cedar/30 border-t-barn-red rounded-full animate-spin;
+  }
+
+  /* European Cabinet 3D Configurator Specific */
+  .configurator-canvas {
+    @apply rounded-lg overflow-hidden shadow-craftsman bg-white;
+  }
+
+  .configurator-controls {
+    @apply space-y-4 p-6;
+  }
+
+  .material-swatch {
+    @apply w-12 h-12 rounded-lg border-2 border-transparent hover:border-barn-red cursor-pointer transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .material-swatch.selected {
+    @apply border-barn-red ring-2 ring-barn-red/30;
+  }
+
+  /* Accessibility Enhancements */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  /* Focus States for European Cabinet Configurator */
+  .focus-visible {
+    @apply outline-none ring-2 ring-barn-red ring-offset-2;
+  }
+
+  /* Print Styles for Quotes */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    
+    body {
+      @apply text-black bg-white;
+    }
+    
+    .print-signature {
+      @apply font-signature text-base;
+    }
+  }
+}
+
+@layer components {
+  /* Mike Switzer Workshop Component Styles */
+  .workshop-hero {
+    @apply hill-country-hero py-24 lg:py-32;
+  }
+
+  .european-cabinet-card {
+    @apply workshop-card hover:shadow-craftsman transition-all duration-300 group;
+  }
+
+  .craftsman-testimonial {
+    @apply bg-hill-sage/10 border-l-4 border-hill-sage p-6 rounded-r-lg;
+  }
+
+  /* 3D Model Loading States */
+  .model-loading {
+    @apply flex items-center justify-center h-64 bg-limestone/50 rounded-lg;
+  }
+
+  .model-error {
+    @apply flex flex-col items-center justify-center h-64 bg-barn-red/10 border border-barn-red/30 rounded-lg text-barn-red;
+  }
+}
+
+@layer utilities {
+  /* Mike Switzer Brand Utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* European Cabinet Specific Utilities */
+  .aspect-cabinet {
+    aspect-ratio: 3/4;
+  }
+
+  .aspect-workshop {
+    aspect-ratio: 16/10;
+  }
+
+  /* Hill Country Spacing */
+  .space-hill-country > * + * {
+    margin-top: 2rem;
+  }
+
+  /* Glass Effect for Modern Elements */
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+
+  /* European Hardware Metallic Effects */
+  .metallic-brass {
+    background: linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #FFD700 100%);
+  }
+
+  .metallic-nickel {
+    background: linear-gradient(135deg, #C0C0C0 0%, #E5E5E5 50%, #F5F5F5 100%);
+  }
+
+  .metallic-bronze {
+    background: linear-gradient(135deg, #CD7F32 0%, #D2691E 50%, #DEB887 100%);
+  }
+}
