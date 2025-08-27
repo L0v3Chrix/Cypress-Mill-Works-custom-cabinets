@@ -122,20 +122,20 @@
 
   /* Buttons - Craftsman Quality */
   .btn-primary {
-    @apply bg-barn-red hover:bg-barn-red/90 text-white font-workshop font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-barn-warm;
+    @apply bg-gradient-to-r from-barn-red to-barn-red/90 hover:from-barn-red/90 hover:to-barn-red/80 text-white font-workshop font-semibold px-8 py-4 rounded-2xl transition-all duration-200 shadow-xl hover:shadow-2xl border border-barn-red/20;
   }
 
   .btn-secondary {
-    @apply bg-hill-sage hover:bg-hill-sage/90 text-white font-workshop font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-lg;
+    @apply bg-gradient-to-r from-hill-sage to-hill-sage/90 hover:from-hill-sage/90 hover:to-hill-sage/80 text-white font-workshop font-semibold px-8 py-4 rounded-2xl transition-all duration-200 shadow-xl hover:shadow-2xl border border-hill-sage/20;
   }
 
   .btn-outline {
-    @apply border-2 border-cedar text-cedar hover:bg-cedar hover:text-white font-workshop font-medium px-6 py-3 rounded-lg transition-all duration-200;
+    @apply border-2 border-cedar text-cedar hover:bg-gradient-to-r hover:from-cedar hover:to-cedar/90 hover:text-white font-workshop font-semibold px-8 py-4 rounded-2xl transition-all duration-200 shadow-lg hover:shadow-xl;
   }
 
   /* Form Elements - Professional Workshop Quality */
   .form-input {
-    @apply w-full px-4 py-3 border border-cedar/30 rounded-lg bg-white font-workshop text-workshop-charcoal placeholder:text-cedar/60 focus:outline-none focus:ring-2 focus:ring-barn-red focus:border-transparent;
+    @apply w-full px-4 py-3 border border-cedar/30 rounded-xl bg-gradient-to-br from-white to-limestone/5 font-workshop text-workshop-charcoal placeholder:text-cedar/60 focus:outline-none focus:ring-2 focus:ring-barn-red focus:border-transparent shadow-sm focus:shadow-lg transition-all duration-200;
   }
 
   .form-label {

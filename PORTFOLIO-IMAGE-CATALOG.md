@@ -311,4 +311,47 @@
 - Integrated appliances
 - Custom proportions
 
-This catalog represents 30 distinct projects showcasing the full range of Cypress Millwork Custom Cabinets' capabilities, from workshop construction scenes to luxury finished installations, each described with authentic Americana flair that honors both the craft and the Hill Country setting.
+### New 2025 Portfolio Additions
+
+**307275267_1171258096792226_1507469343633671906_n.webp**
+- **Project Title**: "Modern Bedroom Built-In Symphony"
+- **Location**: Austin
+- **Category**: Built-Ins/Bedroom Storage
+- **Material**: Light grey frameless cabinetry, minimalist hardware
+- **Description**: Floor-to-ceiling bedroom storage that sings with contemporary precision - where light grey frameless cabinetry creates clean lines against natural light, and black hardware adds the perfect accent notes to this modern composition.
+- **Key Features**: Floor-to-ceiling design, frameless construction, integrated drawers, modern minimalist styling
+
+**497575801_576786928311867_4860975053658897588_n.jpg**
+- **Project Title**: "Contemporary Kitchen Wood Slat Overture"
+- **Location**: Austin
+- **Category**: Kitchen/Contemporary Modern
+- **Material**: Light wood cabinetry, vertical wood slat feature wall
+- **Description**: Where warm wood tones create architectural poetry - this contemporary kitchen features vertical wood slats that add textural rhythm to sleek cabinetry, while pendant lighting provides the perfect accompaniment to this modern Hill Country composition.
+- **Key Features**: Vertical wood slat feature, contemporary styling, pendant lighting, open concept design
+
+**321103061_216300957484173_1757721757784268148_n.webp**
+- **Project Title**: "Custom Media Console with Wire Mesh Melody"
+- **Location**: Austin
+- **Category**: Built-Ins/Media Console
+- **Material**: Natural wood cabinetry, wire mesh door inserts
+- **Description**: This custom media console creates visual harmony with wire mesh door inserts that let electronics breathe while maintaining clean lines - where traditional craftsmanship meets modern functionality in perfect acoustic balance.
+- **Key Features**: Wire mesh door inserts, natural wood grain, traditional construction, media equipment ventilation
+
+**325976485_1213205016299284_2360023161473914130_n.webp**
+- **Project Title**: "Hill Country Reading Nook Ballad"
+- **Location**: Austin
+- **Category**: Built-Ins/Library Den
+- **Material**: Walnut built-in shelving, dramatic wallpaper accent
+- **Description**: Where stories come alive in wood and wallpaper - this built-in library nook features rich walnut shelving that harmonizes with dramatic botanical wallpaper, creating a reading retreat that sings with both comfort and sophistication.
+- **Key Features**: Built-in shelving, walnut construction, integrated seating, dramatic wallpaper accent
+
+
+**502643642_1058076115657227_36543727890542194_n.jpg**
+- **Project Title**: "Luxury Kitchen Appliance Integration Anthem"
+- **Location**: Austin
+- **Category**: Kitchen/Luxury Contemporary
+- **Material**: White frameless cabinetry, integrated luxury appliances, walnut accents
+- **Description**: Where culinary dreams meet European precision - this luxury kitchen integrates high-end appliances seamlessly within white frameless cabinetry, while walnut open shelving adds warm counterpoint to the contemporary composition.
+- **Key Features**: Integrated luxury appliances, frameless construction, mixed materials, walnut accent shelving
+
+This expanded catalog now represents 35 distinct projects showcasing the full range of Cypress Millwork Custom Cabinets' capabilities, from workshop construction scenes to luxury finished installations, each described with authentic Americana flair that honors both the craft and the Hill Country setting.

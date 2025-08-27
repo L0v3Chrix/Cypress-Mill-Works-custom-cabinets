@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Navigation from '../components/Navigation'
+import AIChatWidget from '../components/AIChatWidget'
 
 // CMCC European Cabinet Homepage
 export default function HomePage() {
@@ -30,26 +31,26 @@ export default function HomePage() {
             >
               <div>
                 <h1 className="text-workshop-charcoal leading-tight">
-                  European Frameless Cabinets
+                  Where Old-World Mastery
                   <span className="block text-barn-red mt-2">
-                    Handcrafted in the Hill Country
+                    Meets Hill Country Soul
                   </span>
                 </h1>
                 
                 <p className="mt-6 text-lg text-cedar leading-relaxed">
-                  Deep in the rolling hills of Spicewood, Texas, master craftsman 
-                  <strong className="text-workshop-charcoal"> CMCC craftsmen</strong> blend 
-                  old-world European techniques with modern precision. Every frameless cabinet 
-                  tells a story of uncompromising quality and authentic Texas craftsmanship.
+                  In our Spicewood workshop, <strong className="text-workshop-charcoal">six master craftsmen</strong> work alongside 
+                  state-of-the-art CNC machinery that ensures millimeter-perfect precision. What you see here isn't just a team—it's a 
+                  brotherhood of artisans who've dedicated their lives to perfecting frameless cabinetry. Every morning, they gather 
+                  around these machines knowing that today's work will become tomorrow's family heirloom.
                 </p>
 
                 <div className="mt-6 p-4 bg-hill-sage/10 border-l-4 border-hill-sage rounded-r-lg">
                   <p className="craftsman-quote">
-                    "European frameless construction isn't just about more storage—it's about 
-                    precision you can see and feel in every door, every drawer."
+                    "Watch our team work and you'll see something special—six craftsmen who've turned 
+                    precision into an art form. That's the difference between mass production and masterpiece."
                   </p>
                   <p className="text-sm text-cedar mt-2 font-workshop">
-                    — CMCC European Cabinet Specialists
+                    — Mike & The CMCC Workshop Team
                   </p>
                 </div>
               </div>
@@ -59,7 +60,7 @@ export default function HomePage() {
                   href="/design-tool"
                   className="btn-primary flex items-center justify-center group"
                 >
-                  Design Your European Kitchen
+                  Design Your Dream Kitchen
                   <svg 
                     className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
                     fill="none" 
@@ -81,14 +82,14 @@ export default function HomePage() {
               {/* European Cabinet Features */}
               <div className="grid grid-cols-2 gap-4 pt-8 border-t border-cedar/20">
                 <div className="text-center">
-                  <div className="text-2xl font-craftsman text-barn-red">15%</div>
-                  <div className="text-sm text-cedar">More Storage Space</div>
-                  <div className="text-xs text-cedar/70">vs. face-frame cabinets</div>
+                  <div className="text-2xl font-craftsman text-barn-red">30+</div>
+                  <div className="text-sm text-cedar">Years of Mastery</div>
+                  <div className="text-xs text-cedar/70">learning, perfecting, creating</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-craftsman text-barn-red">32mm</div>
-                  <div className="text-sm text-cedar">European System</div>
-                  <div className="text-xs text-cedar/70">precision construction</div>
+                  <div className="text-2xl font-craftsman text-barn-red">∞</div>
+                  <div className="text-sm text-cedar">Stories Told</div>
+                  <div className="text-xs text-cedar/70">in every handcrafted piece</div>
                 </div>
               </div>
             </motion.div>
@@ -103,7 +104,7 @@ export default function HomePage() {
               <div className="relative rounded-lg overflow-hidden shadow-craftsman">
                 <Image 
                   src="/images/Mike-Switzer-headshoot.jpg"
-                  alt="Mike Switzer - Master craftsman specializing in European frameless cabinets"
+                  alt="The CMCC Workshop Family - Six craftsmen and next-generation apprentices around their precision CNC machinery in Spicewood, Texas"
                   width={600}
                   height={400}
                   className="w-full h-96 object-cover"
@@ -119,11 +120,11 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
                 <p className="signature text-lg">
-                  "Precision you can trust,
-                  <br />craftsmanship you can feel"
+                  "Precision machinery, master craftsmanship,
+                  <br />one commitment to excellence"
                 </p>
                 <p className="text-xs text-cedar mt-1 font-workshop">
-                  – CMCC European Cabinet Specialists
+                  – The CMCC Workshop Team
                 </p>
               </motion.div>
             </motion.div>
@@ -142,35 +143,35 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-workshop-charcoal">
-              Why Choose European Frameless?
+              The Art Behind Every Door
             </h2>
             <p className="mt-4 text-lg text-cedar">
-              CMCC brings decades of European cabinetmaking traditions
-              to every project in the Texas hill country.
+              Step into our Spicewood workshop and you'll hear the stories our craftsmen tell through wood—
+              of precision learned through decades, of families gathering in kitchens that work beautifully.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "Frameless Construction",
-                description: "No face frame means 15% more storage space and cleaner lines",
-                icon: "📐"
+                title: "The Whisper-Quiet Moment",
+                description: "When a drawer closes with barely a sound, you're feeling thirty years of perfecting the craft",
+                icon: "🎵"
               },
               {
-                title: "European Hardware",
-                description: "Soft-close hinges and full-extension drawers for lifetime durability", 
-                icon: "🔧"
+                title: "Built to Outlast Generations",
+                description: "These aren't just cabinets—they're heirlooms waiting to hold your family's stories", 
+                icon: "🏠"
               },
               {
-                title: "Precision Engineering",
-                description: "Millimeter-perfect tolerances ensure perfect alignment",
-                icon: "⚙️"
+                title: "Where Millimeters Matter",
+                description: "In our workshop, we measure twice and cut once because perfection lives in the details",
+                icon: "🔍"
               },
               {
-                title: "Hill Country Quality",
-                description: "Texas craftsmanship meets European construction standards",
-                icon: "🏔️"
+                title: "Hill Country Heart",
+                description: "Texas warmth meets old-world mastery in every piece that leaves our workshop",
+                icon: "❤️"
               }
             ].map((advantage, index) => (
               <motion.div 
@@ -207,11 +208,11 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-workshop-charcoal">
-              European Frameless Excellence
+              Where Stories Come to Life
             </h2>
             <p className="mt-4 text-lg text-cedar">
-              Discover the precision and beauty of European cabinet construction,
-              handcrafted for Texas hill country homes.
+              Each kitchen begins as a conversation and becomes a legacy. Here are the stories 
+              our craftsmen have helped families write, one precision-cut piece at a time.
             </p>
           </motion.div>
 
@@ -253,7 +254,7 @@ export default function HomePage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 right-4">
-                    <div className="european-badge">European Frameless</div>
+                    <div className="european-badge">Handcrafted Legacy</div>
                   </div>
                 </div>
                 <div className="p-4">
@@ -292,11 +293,11 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-white">
-              Ready to Start Your European Cabinet Project?
+              Your Story Starts in Our Workshop
             </h2>
             <p className="mt-4 text-xl text-white/90">
-              Schedule a consultation with our craftsmen at the CMCC Spicewood workshop.
-              Experience the difference of authentic European craftsmanship.
+              Come see where morning conversations become evening masterpieces. 
+              Our craftsmen are ready to listen to your vision and help bring it to life.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -329,7 +330,7 @@ export default function HomePage() {
             <div>
               <h3 className="font-craftsman text-xl mb-4">CMCC Workshop</h3>
               <p className="text-white/80 mb-2">
-                European Frameless Cabinet Specialist
+                Precision Frameless Cabinet Specialists
               </p>
               <p className="text-white/80 mb-2">
                 📍 Spicewood, Texas 78669
@@ -344,12 +345,12 @@ export default function HomePage() {
 
             {/* Services */}
             <div>
-              <h4 className="font-workshop font-semibold mb-4">European Cabinet Services</h4>
+              <h4 className="font-workshop font-semibold mb-4">Custom Cabinet Services</h4>
               <ul className="space-y-2 text-white/80">
                 <li>Custom Kitchen Cabinets</li>
                 <li>Bathroom Vanities</li>
                 <li>Built-in Storage Solutions</li>
-                <li>European Hardware Installation</li>
+                <li>Premium Hardware Installation</li>
                 <li>Workshop Tours & Consultations</li>
               </ul>
             </div>
@@ -369,7 +370,7 @@ export default function HomePage() {
 
           <div className="border-t border-white/20 mt-8 pt-8 text-center">
             <p className="text-white/60 text-sm">
-              © 2025 Cypress Millwork Custom Cabinets. European frameless cabinets handcrafted by CMCC in Spicewood, Texas.
+              © 2025 Cypress Millwork Custom Cabinets. Precision frameless cabinets handcrafted by CMCC in Spicewood, Texas.
             </p>
             <p className="signature text-white/40 text-sm mt-2">
               "Every cabinet tells a story of hill country craftsmanship"
@@ -377,6 +378,9 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+      
+      {/* AI Chat Widget */}
+      <AIChatWidget />
     </main>
   )
 }

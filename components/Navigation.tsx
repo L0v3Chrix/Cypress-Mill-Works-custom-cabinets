@@ -11,16 +11,13 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo & CMCC Branding */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-cedar rounded-lg flex items-center justify-center">
-              <span className="text-white font-craftsman text-lg">C</span>
-            </div>
+          <Link href="/" className="flex items-center">
             <div>
-              <div className="font-craftsman text-xl text-workshop-charcoal">
+              <div className="font-craftsman text-2xl text-workshop-charcoal tracking-tight">
                 Cypress Millwork
               </div>
-              <div className="text-xs text-cedar font-workshop">
-                European Cabinets • Spicewood, TX
+              <div className="text-sm text-cedar font-workshop tracking-wide">
+                Custom Cabinets • Spicewood, TX
               </div>
             </div>
           </Link>
@@ -31,7 +28,7 @@ export default function Navigation() {
               Our Craftsmanship
             </Link>
             <Link href="/european-cabinets" className="nav-link">
-              European Cabinets
+              Our Craft
             </Link>
             <Link href="/design-tool" className="nav-link">
               Design Your Kitchen
@@ -46,7 +43,7 @@ export default function Navigation() {
 
           {/* Desktop CTA Button */}
           <Link 
-            href="/progressive-form" 
+            href="/design-tool" 
             className="btn-primary hidden md:inline-flex items-center"
           >
             Schedule Consultation
@@ -120,7 +117,7 @@ export default function Navigation() {
               Our Process
             </Link>
             <Link
-              href="/progressive-form"
+              href="/design-tool"
               className="block mx-3 my-2 px-4 py-2 bg-barn-red text-white text-center font-workshop rounded-md hover:bg-barn-red/90 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
