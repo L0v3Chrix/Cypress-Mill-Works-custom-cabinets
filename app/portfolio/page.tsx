@@ -197,92 +197,92 @@ export default function PortfolioPage() {
     },
     {
       id: 19,
-      title: "Master Suite Bathroom Ballad",
-      location: "Austin, TX",
-      style: "Contemporary Luxury Bathroom",
-      material: "Natural wood floating vanity with quartz surfaces and geometric tile",
-      description: "Natural wood tones create a spa-like chorus in this master bathroom, where floating vanities provide visual lightness and geometric marble tile adds rhythmic pattern that makes every morning feel like a fresh verse.",
-      features: ["Floating Vanity Design", "Vessel Sinks", "Brass Fixtures", "Geometric Backsplash"],
+      title: "Workshop Construction Symphony",
+      location: "Spicewood, TX",
+      style: "Workshop Construction Process",
+      material: "Wood construction with precision clamping systems",
+      description: "Where precision meets patience - orange woodworking clamps hold pieces in perfect alignment while adhesive cures. Each clamp positioned with the same care that defines every CMCC cabinet, ensuring joints that will last generations.",
+      features: ["Precision Clamping Systems", "Professional Construction", "Quality Control", "Workshop Craftsmanship"],
       image: "/images/portfolio/254442879_596696218041456_6087512775437836428_n.jpg"
     },
     {
       id: 20,
-      title: "Library Built-In Composition",
-      location: "West Lake Hills, TX",
-      style: "Built-Ins Library",
-      material: "Floor-to-ceiling millwork with adjustable shelving and reading nook",
-      description: "Where knowledge finds its home - floor-to-ceiling built-ins create a library that celebrates both books and craftsmanship, with adjustable shelving that adapts like improvisation in a jazz standard.",
-      features: ["Floor-to-ceiling Design", "Adjustable Shelving", "Integrated Reading Space", "Custom Millwork"],
+      title: "Luxury Marble Vanity with Wood Slat Accent",
+      location: "Austin, TX",
+      style: "Contemporary Luxury Bathroom",
+      material: "Calacatta marble with curved wood slat base",
+      description: "Where European precision meets natural beauty - dramatic marble veining flows like a river while vertical wood slats create warmth below. The curved design softens angles, creating a spa-like retreat that sings with sophisticated elegance.",
+      features: ["Curved Wood Slat Design", "Calacatta Marble", "Floating Vanity", "Contemporary Luxury"],
       image: "/images/portfolio/254610483_276709107797266_8152805412889345432_n.jpg"
     },
     {
       id: 21,
-      title: "Closet Organization Overture",
+      title: "Luxury White Kitchen with Brass Harmony",
       location: "Austin, TX",
-      style: "Walk-In Closet Storage",
-      material: "Custom closet systems with maximized organization and premium finishes",
-      description: "Where morning routines become effortless - this walk-in closet creates harmony between accessibility and organization, with custom systems that make getting dressed feel like the opening notes of a perfect day.",
-      features: ["Custom Organization", "Maximized Space", "Premium Materials", "Efficient Layout"],
+      style: "European Frameless Kitchen",
+      material: "White frameless cabinetry with brass hardware and marble countertops",
+      description: "Where culinary dreams meet Austrian precision - white frameless cabinets create clean verses while brass hardware adds golden accents throughout. The appliance garage and coffee station sing of thoughtful design that anticipates every morning ritual.",
+      features: ["European Frameless Construction", "Brass Hardware", "Appliance Garage", "Integrated Coffee Station"],
       image: "/images/portfolio/255176085_4576678999081292_4787816572085264561_n.jpg"
     },
     {
       id: 22,
-      title: "Transitional Kitchen Finale",
-      location: "Lakeway, TX",
-      style: "Transitional Kitchen",
-      material: "Mixed traditional and contemporary elements with neutral palette",
-      description: "The perfect bridge between old and new - this transitional kitchen combines traditional warmth with contemporary function, creating a space that feels both timeless and current, like a classic song with a fresh arrangement.",
-      features: ["Transitional Styling", "Neutral Colors", "Balanced Design", "Contemporary Functionality"],
+      title: "Navy Kitchen with Hexagonal Drama",
+      location: "Austin, TX",
+      style: "Contemporary Bold Kitchen",
+      material: "Navy frameless cabinetry with hexagonal tile and wood accents",
+      description: "Bold navy cabinetry creates striking contrast against the dramatic hexagonal tile backsplash that flows like geometric poetry. Natural wood floating shelves add warmth while the island anchors the space with contemporary confidence.",
+      features: ["Navy Frameless Cabinets", "Hexagonal Tile Feature", "Wood Floating Shelves", "Contemporary Island"],
       image: "/images/portfolio/257450558_575129390262693_3622470329118153826_n.jpg"
     },
     {
       id: 23,
-      title: "Rustic Kitchen Chord Progression",
-      location: "Dripping Springs, TX",
-      style: "Rustic Traditional Kitchen",
-      material: "Distressed wood cabinetry with natural stone counters",
-      description: "Where rustic charm meets refined execution - distressed wood cabinetry tells stories of weathered barns and family gatherings, while modern functionality ensures this kitchen plays beautifully for generations to come.",
-      features: ["Distressed Finish", "Natural Materials", "Rustic Styling", "Modern Functionality"],
+      title: "Modern Walnut Bathroom Elegance",
+      location: "Austin, TX",
+      style: "Contemporary Bathroom",
+      material: "Walnut veneer floating vanity with quartz countertops",
+      description: "Where natural beauty meets European precision - rich walnut grain creates warmth while clean lines maintain contemporary elegance. The floating design provides visual lightness, making this master bathroom feel like a daily spa retreat.",
+      features: ["Walnut Veneer Construction", "Floating Vanity Design", "Dual Undermount Sinks", "Contemporary Hardware"],
       image: "/images/portfolio/257498776_125805266543632_8354965614861342769_n.jpg"
     },
     {
       id: 24,
-      title: "Contemporary Kitchen Bridge",
-      location: "Bee Cave, TX",
-      style: "Contemporary Transitional Kitchen",
-      material: "Mixed wood tones with clean lines and integrated storage",
-      description: "This transitional kitchen bridges traditional warmth with contemporary function - where mixed wood tones create visual interest and clean lines keep the melody uncluttered, allowing the natural materials to sing the lead.",
-      features: ["Mixed Materials", "Clean Design", "Transitional Styling", "Integrated Storage"],
+      title: "Two-Tone Modern Kitchen Symphony",
+      location: "Austin, TX",
+      style: "Contemporary Modern Kitchen",
+      material: "White upper cabinets with navy blue island and quartz countertops",
+      description: "Where contrast creates harmony - crisp white upper cabinets provide brightness while the navy blue island anchors the space with contemporary confidence. European frameless construction ensures clean lines throughout this modern composition.",
+      features: ["Two-Tone Design", "European Frameless", "Quartz Countertops", "Contemporary Pendants"],
       image: "/images/portfolio/257880561_416462976745349_1347656362255144599_n.jpg"
     },
     {
       id: 25,
-      title: "Galley Kitchen Verse",
+      title: "Home Library & Office Built-In Symphony",
       location: "Austin, TX",
-      style: "Efficient Galley Kitchen",
-      material: "White cabinetry with maximized storage and European hardware",
-      description: "Proof that small spaces can sing big songs - this galley kitchen maximizes every inch through thoughtful design and European efficiency, where each cabinet serves multiple purposes like verses in a well-crafted ballad.",
-      features: ["Space Efficiency", "Maximized Storage", "Galley Layout", "Smart Organization"],
+      style: "Custom Built-In Library Office",
+      material: "White painted millwork with adjustable shelving and integrated desk",
+      description: "Where knowledge meets craftsmanship - floor-to-ceiling built-ins create a library that celebrates both books and precision millwork. The integrated desk space provides the perfect spot for focused work while surrounded by inspiration.",
+      features: ["Floor-to-ceiling Design", "Integrated Desk Space", "Adjustable Shelving", "Custom Millwork"],
       image: "/images/portfolio/258184582_753868032675641_4699146827868670583_n.jpg"
     },
     {
       id: 26,
-      title: "Custom Office Built-In Symphony",
-      location: "Lakeway, TX",
-      style: "Home Office Built-Ins",
-      material: "Custom millwork with integrated desk and storage solutions",
-      description: "Where work meets inspiration - custom built-ins create a home office that harmonizes productivity with beauty, each shelf and drawer positioned like notes in a composition designed for both form and function.",
-      features: ["Integrated Desk", "Custom Storage", "Built-in Organization", "Workspace Optimization"],
+      title: "Minimalist Bathroom Vanity Elegance",
+      location: "Austin, TX",
+      style: "Contemporary Minimalist Bathroom",
+      material: "Light grey floating vanity with integrated sinks",
+      description: "Where less becomes more - this minimalist floating vanity creates serene beauty through clean lines and thoughtful proportions. Integrated dual sinks and European soft-close drawers prove that simplicity and functionality sing in perfect harmony.",
+      features: ["Floating Design", "Integrated Dual Sinks", "Minimalist Hardware", "Clean Contemporary Lines"],
       image: "/images/portfolio/76969124_1292066327668722_461405972132165851_n.jpg"
     },
     {
       id: 27,
-      title: "Mudroom Organization Melody",
-      location: "Dripping Springs, TX",
-      style: "Mudroom Storage",
-      material: "Functional cabinetry with organization systems and durable finishes",
-      description: "Where chaos finds its rhythm - this mudroom creates order from everyday disorder, with storage solutions that sing of European efficiency and Texas practicality working in perfect harmony.",
-      features: ["Organization Systems", "Durable Construction", "Functional Design", "Family-friendly Storage"],
+      title: "Dining Room Built-In Display & Bar",
+      location: "Austin, TX",
+      style: "Contemporary Dining Room Built-Ins",
+      material: "White upper display shelves with walnut base cabinetry and quartz counters",
+      description: "Where entertaining meets artistry - floor-to-ceiling built-ins create both display and service in this sophisticated dining space. White open shelving showcases treasured pieces while walnut cabinetry below houses the essentials for memorable gatherings.",
+      features: ["Floor-to-ceiling Design", "Mixed Material Construction", "Display Shelving", "Integrated Wet Bar"],
       image: "/images/portfolio/264150779_4520965057988845_7932617969982949820_n.jpg"
     },
     {
@@ -358,10 +358,10 @@ export default function PortfolioPage() {
               <motion.div 
                 key={project.id}
                 className="european-cabinet-card group cursor-pointer"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.3) }}
+                viewport={{ once: true, margin: "-20%" }}
               >
                 {/* Project Image */}
                 <div className="aspect-cabinet relative rounded-t-lg overflow-hidden">
