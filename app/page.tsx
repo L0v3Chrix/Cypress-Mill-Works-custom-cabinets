@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-// Mike Switzer's European Cabinet Homepage
+// CMCC European Cabinet Homepage
 export default function HomePage() {
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -19,7 +19,7 @@ export default function HomePage() {
       <nav className="bg-limestone border-b border-cedar/20 sticky top-0 z-40 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo & Mike Switzer Branding */}
+            {/* Logo & CMCC Branding */}
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-cedar rounded-lg flex items-center justify-center">
                 <span className="text-white font-craftsman text-lg">C</span>
@@ -64,7 +64,7 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* Hero Section - Mike Switzer's Story */}
+      {/* Hero Section - CMCC Story */}
       <section className="workshop-hero relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -139,7 +139,7 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            {/* Mike Switzer Workshop Image */}
+            {/* CMCC Workshop Image */}
             <motion.div 
               className="relative"
               initial={{ opacity: 0, x: 50 }}
@@ -147,7 +147,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <div className="relative rounded-lg overflow-hidden shadow-craftsman">
-                {/* Placeholder for Mike Switzer workshop photo */}
+                {/* Placeholder for CMCC workshop photo */}
                 <div className="w-full h-96 bg-gradient-to-br from-cedar to-weathered-wood flex items-center justify-center">
                   <div className="text-center text-white">
                     <div className="text-6xl font-craftsman mb-4">🔨</div>
@@ -158,7 +158,7 @@ export default function HomePage() {
                 {/* Future: Replace with actual photo */}
                 {/* <Image 
                   src="/images/mike-switzer-workshop.jpg"
-                  alt="Mike Switzer crafting European frameless cabinets in his Spicewood workshop"
+                  alt="CMCC craftsmen building European frameless cabinets in the Spicewood workshop"
                   width={600}
                   height={400}
                   className="w-full h-96 object-cover"
