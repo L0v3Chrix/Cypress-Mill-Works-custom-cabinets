@@ -274,7 +274,7 @@
   }
 
   .european-cabinet-card {
-    @apply workshop-card hover:shadow-craftsman transition-all duration-300 group;
+    @apply workshop-card hover:shadow-craftsman transition-all duration-300;
   }
 
   .craftsman-testimonial {
