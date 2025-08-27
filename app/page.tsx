@@ -55,7 +55,7 @@ export default function HomePage() {
 
             {/* CTA Button */}
             <Link 
-              href="/consultation" 
+              href="/progressive-form" 
               className="btn-primary hidden md:inline-flex items-center"
             >
               Schedule Consultation
@@ -84,7 +84,7 @@ export default function HomePage() {
                 
                 <p className="mt-6 text-lg text-cedar leading-relaxed">
                   Deep in the rolling hills of Spicewood, Texas, master craftsman 
-                  <strong className="text-workshop-charcoal"> Mike Switzer</strong> blends 
+                  <strong className="text-workshop-charcoal"> CMCC craftsmen</strong> blend 
                   old-world European techniques with modern precision. Every frameless cabinet 
                   tells a story of uncompromising quality and authentic Texas craftsmanship.
                 </p>
@@ -95,7 +95,7 @@ export default function HomePage() {
                     precision you can see and feel in every door, every drawer."
                   </p>
                   <p className="text-sm text-cedar mt-2 font-workshop">
-                    — Mike Switzer, Master Craftsman
+                    — CMCC European Cabinet Specialists
                   </p>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function HomePage() {
                 <div className="w-full h-96 bg-gradient-to-br from-cedar to-weathered-wood flex items-center justify-center">
                   <div className="text-center text-white">
                     <div className="text-6xl font-craftsman mb-4">🔨</div>
-                    <div className="font-workshop">Mike Switzer's Workshop</div>
+                    <div className="font-workshop">CMCC Workshop</div>
                     <div className="text-sm opacity-80">Spicewood, Texas</div>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export default function HomePage() {
                   <br />craftsmanship you can feel"
                 </p>
                 <p className="text-xs text-cedar mt-1 font-workshop">
-                  – Mike Switzer, European Cabinet Specialist
+                  – CMCC European Cabinet Specialists
                 </p>
               </motion.div>
             </motion.div>
@@ -200,7 +200,7 @@ export default function HomePage() {
               Why Choose European Frameless?
             </h2>
             <p className="mt-4 text-lg text-cedar">
-              Mike Switzer brings decades of European cabinetmaking traditions
+              CMCC brings decades of European cabinetmaking traditions
               to every project in the Texas hill country.
             </p>
           </motion.div>
@@ -296,7 +296,7 @@ export default function HomePage() {
                     Austin, TX • White Oak with Natural Finish
                   </p>
                   <div className="mt-2 signature text-xs">
-                    Crafted by Mike Switzer
+                    Crafted by CMCC
                   </div>
                 </div>
               </motion.div>
@@ -327,13 +327,13 @@ export default function HomePage() {
               Ready to Start Your European Cabinet Project?
             </h2>
             <p className="mt-4 text-xl text-white/90">
-              Schedule a consultation with Mike Switzer at his Spicewood workshop.
+              Schedule a consultation with our craftsmen at the CMCC Spicewood workshop.
               Experience the difference of authentic European craftsmanship.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/consultation"
+                href="/progressive-form"
                 className="bg-white text-barn-red hover:bg-limestone font-workshop font-medium px-8 py-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Schedule Workshop Visit
@@ -357,9 +357,9 @@ export default function HomePage() {
       <footer className="bg-workshop-charcoal text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Mike Switzer Workshop Info */}
+            {/* CMCC Workshop Info */}
             <div>
-              <h3 className="font-craftsman text-xl mb-4">Mike Switzer's Workshop</h3>
+              <h3 className="font-craftsman text-xl mb-4">CMCC Workshop</h3>
               <p className="text-white/80 mb-2">
                 European Frameless Cabinet Specialist
               </p>
@@ -401,7 +401,7 @@ export default function HomePage() {
 
           <div className="border-t border-white/20 mt-8 pt-8 text-center">
             <p className="text-white/60 text-sm">
-              © 2025 Cypress Millwork Custom Cabinets. European frameless cabinets handcrafted by Mike Switzer in Spicewood, Texas.
+              © 2025 Cypress Millwork Custom Cabinets. European frameless cabinets handcrafted by CMCC in Spicewood, Texas.
             </p>
             <p className="signature text-white/40 text-sm mt-2">
               "Every cabinet tells a story of hill country craftsmanship"
