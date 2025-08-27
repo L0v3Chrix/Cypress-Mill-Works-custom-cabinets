@@ -115,17 +115,29 @@ export default function EuropeanCabinetsPage() {
             </motion.div>
 
             <motion.div 
-              className="relative"
+              className="space-y-8"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="w-full h-96 bg-gradient-to-br from-cedar to-weathered-wood rounded-lg flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-6xl font-craftsman mb-4">🏗️</div>
-                  <div className="font-workshop">European Construction</div>
-                  <div className="text-sm opacity-80">32mm System Precision</div>
+              {/* Placeholder for frameless vs face-frame comparison */}
+              <div className="w-full h-64 bg-gradient-to-br from-barn-red/10 to-barn-red/20 rounded-lg flex items-center justify-center border border-barn-red/20">
+                <div className="text-center text-barn-red">
+                  <div className="text-3xl font-craftsman mb-2">📐</div>
+                  <div className="font-workshop font-medium">Frameless vs Face-Frame</div>
+                  <div className="text-sm opacity-70">Cross-section Comparison</div>
+                  <div className="text-xs opacity-50 mt-1">Showing 15% storage advantage</div>
+                </div>
+              </div>
+              
+              {/* Placeholder for 32mm drilling pattern */}
+              <div className="w-full h-64 bg-gradient-to-br from-hill-sage/10 to-hill-sage/20 rounded-lg flex items-center justify-center border border-hill-sage/20">
+                <div className="text-center text-hill-sage">
+                  <div className="text-3xl font-craftsman mb-2">⚡</div>
+                  <div className="font-workshop font-medium">32mm Drilling Pattern</div>
+                  <div className="text-sm opacity-70">Precision Layout Diagram</div>
+                  <div className="text-xs opacity-50 mt-1">Millimeter-perfect hole spacing</div>
                 </div>
               </div>
             </motion.div>
@@ -165,14 +177,14 @@ export default function EuropeanCabinetsPage() {
                 ]
               },
               {
-                title: "Modular Hardware",
-                description: "European hinges, drawer slides, and accessories designed specifically for the 32mm system.",
+                title: "Blum Hardware Integration",
+                description: "Exclusively using Austrian Blum hardware, the world's premier cabinet hardware manufacturer.",
                 icon: "🔧",
                 details: [
-                  "Blum, Grass, and Hettich systems",
-                  "Soft-close technology standard",
-                  "Full-extension drawer slides",
-                  "Concealed, adjustable hinges"
+                  "BLUMOTION soft-close technology",
+                  "TANDEM full-extension slides",
+                  "CLIP top hinges with tool-free adjustment",
+                  "Lifetime functionality guarantee"
                 ]
               },
               {
@@ -220,7 +232,7 @@ export default function EuropeanCabinetsPage() {
         </div>
       </section>
 
-      {/* European Hardware */}
+      {/* Blum Hardware Excellence */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -231,34 +243,91 @@ export default function EuropeanCabinetsPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-workshop-charcoal">
-              Premium European Hardware
+              Why We Choose Blum Exclusively
             </h2>
             <p className="mt-4 text-lg text-cedar">
-              We exclusively use the finest European hardware manufacturers
+              Austrian engineering excellence meets our Hill Country quality standards
             </p>
           </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+            <motion.div 
+              className="space-y-6"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="font-craftsman text-3xl text-workshop-charcoal">
+                The Blum Difference
+              </h3>
+              <p className="text-cedar leading-relaxed">
+                Founded in 1952 in Höchst, Austria, Julius Blum GmbH represents the pinnacle of cabinet hardware engineering. 
+                Their commitment to quality mirrors our own—every component is precision-manufactured to tolerances measured 
+                in fractions of millimeters, ensuring your cabinets operate flawlessly for decades.
+              </p>
+              <p className="text-cedar leading-relaxed">
+                At CMCC, we've chosen Blum as our exclusive hardware partner because their Austrian engineering philosophy 
+                aligns perfectly with our Hill Country values: build it right the first time, make it last forever, 
+                and never compromise on quality.
+              </p>
+            </motion.div>
+            
+            <motion.div 
+              className="relative"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              {/* Placeholder for Blum CAD diagram */}
+              <div className="w-full h-96 bg-gradient-to-br from-barn-red/10 to-barn-red/20 rounded-lg flex items-center justify-center border border-barn-red/20">
+                <div className="text-center text-barn-red">
+                  <div className="text-4xl font-craftsman mb-4">⚙️</div>
+                  <div className="font-workshop font-medium">Blum CLIP top Hinge</div>
+                  <div className="text-sm opacity-70">CAD Technical Diagram</div>
+                  <div className="text-xs opacity-50 mt-2">Tool-free adjustment • 107° opening</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                brand: "Blum",
-                specialty: "Hinges & Drawer Systems",
-                description: "Austrian precision engineering with lifetime warranties. Known for the smoothest soft-close operation.",
-                features: ["BLUMOTION soft-close", "TANDEM drawer slides", "AVENTOS lift systems"]
+                system: "CLIP top Hinges",
+                description: "The world's most advanced concealed hinge system with tool-free adjustment and 107° opening angle.",
+                specs: [
+                  "107° opening angle for full access",
+                  "Tool-free 3D adjustment capability", 
+                  "Integrated BLUMOTION soft-close",
+                  "Tested for 200,000 cycles minimum"
+                ],
+                applications: "All door types, overlay and inset applications"
               },
               {
-                brand: "Grass",
-                specialty: "Specialty Hardware",
-                description: "German innovation in cabinet hardware, specializing in unique solutions and premium finishes.",
-                features: ["Unique hinge solutions", "Premium drawer systems", "Specialty applications"]
+                system: "TANDEM Drawer Systems",
+                description: "Full-extension drawer slides with integrated BLUMOTION technology for whisper-quiet operation.",
+                specs: [
+                  "Full extension with 100% access",
+                  "Integrated BLUMOTION soft-close",
+                  "Weight capacity up to 176 lbs",
+                  "Self-closing from 2 inches out"
+                ],
+                applications: "Kitchen drawers, bathroom vanities, office storage"
               },
               {
-                brand: "Hettich",
-                specialty: "Complete Systems", 
-                description: "German engineering excellence providing complete hardware ecosystems for European cabinets.",
-                features: ["ArciTech drawer systems", "Sensys hinges", "AvanTech sliding systems"]
+                system: "AVENTOS Lift Systems", 
+                description: "Revolutionary lift systems for overhead cabinets, providing effortless opening with stay-open functionality.",
+                specs: [
+                  "Effortless opening with minimal force",
+                  "Adjustable opening height control",
+                  "Integrated soft-close dampening",
+                  "Load capacity up to 22 lbs per door"
+                ],
+                applications: "Upper cabinets, appliance garages, tall storage units"
               }
-            ].map((hardware, index) => (
+            ].map((system, index) => (
               <motion.div 
                 key={index}
                 className="workshop-card p-6"
@@ -267,23 +336,29 @@ export default function EuropeanCabinetsPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="font-craftsman text-2xl text-workshop-charcoal mb-2">
-                  {hardware.brand}
+                <h3 className="font-craftsman text-xl text-workshop-charcoal mb-2">
+                  {system.system}
                 </h3>
-                <div className="text-barn-red font-workshop font-medium mb-4">
-                  {hardware.specialty}
-                </div>
-                <p className="text-cedar mb-6">
-                  {hardware.description}
+                <p className="text-cedar mb-4 text-sm leading-relaxed">
+                  {system.description}
                 </p>
-                <ul className="space-y-2">
-                  {hardware.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start space-x-2">
-                      <span className="text-barn-red mt-1">•</span>
-                      <span className="text-cedar text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="text-barn-red font-workshop font-medium text-sm mb-2">Technical Specifications:</h4>
+                    <ul className="space-y-1">
+                      {system.specs.map((spec, specIndex) => (
+                        <li key={specIndex} className="flex items-start space-x-2">
+                          <span className="text-barn-red mt-1 text-xs">•</span>
+                          <span className="text-cedar text-xs leading-relaxed">{spec}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="pt-2 border-t border-cedar/20">
+                    <h4 className="text-barn-red font-workshop font-medium text-sm mb-1">Best Applications:</h4>
+                    <p className="text-cedar text-xs">{system.applications}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>

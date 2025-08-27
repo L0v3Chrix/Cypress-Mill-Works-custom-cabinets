@@ -31,6 +31,19 @@
   body {
     @apply font-workshop text-workshop-charcoal bg-limestone antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Performance optimizations */
+  * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 
   /* European Cabinet Typography Hierarchy */
