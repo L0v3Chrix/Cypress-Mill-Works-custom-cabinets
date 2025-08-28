@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // European Cabinet Website Configuration
-  experimental: {
-    appDir: true,
-  },
+  // appDir is now stable in Next.js 14, no longer experimental
   images: {
     remotePatterns: [
       {

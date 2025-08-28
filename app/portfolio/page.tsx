@@ -5,13 +5,35 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Navigation from '../../components/Navigation'
+import { PortfolioGridSkeleton } from '../../components/LoadingSkeleton'
 
 export default function PortfolioPage() {
   const [isLoaded, setIsLoaded] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [loadingMore, setLoadingMore] = useState(false)
+  const projectsPerPage = 9 // 3x3 grid for optimal performance
 
   useEffect(() => {
     setIsLoaded(true)
   }, [])
+
+  const totalPages = Math.ceil(portfolioProjects.length / projectsPerPage)
+  const startIndex = (currentPage - 1) * projectsPerPage
+  const endIndex = startIndex + projectsPerPage
+  const currentProjects = portfolioProjects.slice(startIndex, endIndex)
+
+  const handleLoadMore = () => {
+    setLoadingMore(true)
+    setTimeout(() => {
+      setCurrentPage(prev => Math.min(prev + 1, totalPages))
+      setLoadingMore(false)
+    }, 500)
+  }
+
+  const handlePrevious = () => {
+    setCurrentPage(prev => Math.max(prev - 1, 1))
+    window.scrollTo({ top: 400, behavior: 'smooth' })
+  }
 
   // Portfolio data with authentic images and descriptions - 29 projects
   const portfolioProjects = [
@@ -353,8 +375,38 @@ export default function PortfolioPage() {
       {/* Portfolio Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Pagination Navigation */}
+          <div className="flex justify-between items-center mb-8 p-4 bg-limestone/50 rounded-lg">
+            <div className="text-cedar text-sm">
+              Page {currentPage} of {totalPages} • Showing {currentProjects.length} of {portfolioProjects.length} projects
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={handlePrevious}
+                disabled={currentPage === 1}
+                className="px-4 py-2 bg-barn-red text-white rounded-lg font-workshop text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-barn-red/90 transition-colors"
+              >
+                Previous
+              </button>
+              <button
+                onClick={handleLoadMore}
+                disabled={currentPage === totalPages || loadingMore}
+                className="px-4 py-2 bg-barn-red text-white rounded-lg font-workshop text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-barn-red/90 transition-colors"
+              >
+                {loadingMore ? 'Loading...' : 'Next'}
+              </button>
+            </div>
+          </div>
+
+          {/* Loading State */}
+          {loadingMore && (
+            <div className="mb-8">
+              <PortfolioGridSkeleton />
+            </div>
+          )}
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolioProjects.map((project, index) => (
+            {currentProjects.map((project, index) => (
               <motion.div 
                 key={project.id}
                 className="european-cabinet-card group cursor-pointer"
@@ -369,7 +421,10 @@ export default function PortfolioPage() {
                     src={project.image}
                     alt={`${project.title} - European frameless cabinets in ${project.location}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading={index < 3 ? 'eager' : 'lazy'}
+                    priority={index < 3}
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
                   

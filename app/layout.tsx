@@ -1,7 +1,34 @@
 import type { Metadata } from 'next'
+import { Playfair_Display, Source_Sans_Pro, Kalam } from 'next/font/google'
+import ErrorBoundary from '../components/ErrorBoundary'
 import './globals.css'
 
+// Optimized font loading for performance
+const playfairDisplay = Playfair_Display({ 
+  subsets: ['latin'], 
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-craftsman',
+  display: 'swap'
+})
+
+const sourceSansPro = Source_Sans_Pro({ 
+  subsets: ['latin'], 
+  weight: ['300', '400', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-workshop',
+  display: 'swap'
+})
+
+const kalam = Kalam({ 
+  subsets: ['latin'], 
+  weight: ['300', '400', '700'],
+  variable: '--font-signature',
+  display: 'swap'
+})
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://cypressmillwork.com'),
   title: 'European Frameless Cabinets by Mike Switzer | Cypress Millwork Custom Cabinets',
   description: 'Handcrafted European frameless cabinets by master craftsman Mike Switzer in Spicewood, Texas. Serving Austin and Central Texas hill country with authentic craftsmanship and modern precision.',
   keywords: [
@@ -194,19 +221,9 @@ export default function RootLayout({
           }}
         />
 
-        {/* Preload Critical Fonts */}
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-          as="style"
-        />
-        <link
-          rel="preload" 
-          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
-          as="style"
-        />
+        {/* Critical fonts now handled by next/font/google for optimal performance */}
       </head>
-      <body className="bg-limestone text-workshop-charcoal font-workshop antialiased">
+      <body className={`bg-limestone text-workshop-charcoal antialiased ${playfairDisplay.variable} ${sourceSansPro.variable} ${kalam.variable}`}>
         {/* Skip to main content for accessibility */}
         <a 
           href="#main-content" 
@@ -215,10 +232,12 @@ export default function RootLayout({
           Skip to main content
         </a>
         
-        {/* Main Application */}
-        <div className="min-h-screen flex flex-col">
-          {children}
-        </div>
+        {/* Main Application with Error Boundary */}
+        <ErrorBoundary>
+          <div className="min-h-screen flex flex-col">
+            {children}
+          </div>
+        </ErrorBoundary>
 
         {/* European Cabinet Website Analytics */}
         <script
